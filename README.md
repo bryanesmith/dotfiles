@@ -1,5 +1,8 @@
-Backup ~/.vim and ~/.vimrc. Then, from this directory:
+### Install
 
-  $ ln -s .vimrc ~/.vimrc
-  $ ln -s .vim   ~/.vim
+Backup `~/.vim` and `~/.vimrc`. Then, from this directory:
+
+```ln -s .vimrc ~/.vimrc
+ln -s .vim   ~/.vim
+```
 
