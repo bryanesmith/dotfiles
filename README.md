@@ -1,7 +1,7 @@
 ### Install
 
-Backup `~/.vim` and `~/.vimrc`. Then, from this directory:
+Backup `~/.vim` and `~/.vimrc`. Then create symlinks to files in this repo:
 
-    ln -s .vimrc ~/.vimrc
-    ln -s .vim   ~/.vim
+    ln -s /path/to/vim/.vimrc ~/.vimrc
+    ln -s /path/to/vim/.vim   ~/.vim
 
