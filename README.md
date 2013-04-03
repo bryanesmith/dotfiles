@@ -1,4 +1,6 @@
-### Install
+# Install
+
+## VIM
 
 Backup `~/.vim` and `~/.vimrc`. Then create symlinks to files in this repo:
 
