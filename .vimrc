@@ -31,7 +31,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set nobackup           " No backups
-set noswapfile         " No swap files
+" set noswapfile         " No swap files
 
 " Sass should be highlighted as CSS (TODO: use vim-haml)
 au BufNewFile,BufRead *.scss set ft=css
