@@ -9,8 +9,8 @@ set encoding=utf8
 set autoindent          
 set smartindent         " Determine indentation in language-specific way
 set nu                  " Show line numbers
-set tabstop=2           " Tabs size in spaces
-set shiftwidth=2        " Reindent (>> and <<) and autoindent size in spaces
+set tabstop=4           " Tabs size in spaces
+set shiftwidth=4        " Reindent (>> and <<) and autoindent size in spaces
 set expandtab           " Turns tabs into spaces
 set showmatch           " Quickly jump to matching bracket and return
 set incsearch           " Incremental searching
@@ -31,7 +31,7 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set nobackup           " No backups
-set noswapfile         " No swap files
+" set noswapfile         " No swap files
 
 " Sass should be highlighted as CSS (TODO: use vim-haml)
 au BufNewFile,BufRead *.scss set ft=css
