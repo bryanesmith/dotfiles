@@ -1,43 +1,28 @@
-set nocompatible
+se nocompatible 		        " Use vim settings instead of vi
 
-" Pathogen for plugin management.
-" Install plugins at: ~/.vim/bundle/
-call pathogen#infect()
-Helptags
+" Pathogen for managing runtime.
+" Add plugins to ~/.vim/bundle
+execute pathogen#infect()
+filetype plugin indent on
+syntax on			            " syntax highlighting
 
-set encoding=utf8
-set autoindent          
-set smartindent         " Determine indentation in language-specific way
-set nu                  " Show line numbers
-set tabstop=2           " Tabs size in spaces
-set shiftwidth=2        " Reindent (>> and <<) and autoindent size in spaces
-set expandtab           " Turns tabs into spaces
-set showmatch           " Quickly jump to matching bracket and return
-set incsearch           " Incremental searching
-set ruler               " Show line and column number of cursor
-set hlsearch       
-set smartcase           " ignore case iff search pattern entirely lowercase
+se title                        " Set terminal title
+se nu 				            " line numbers
+se ruler			            " cursor positions
+se hlsearch			            " highlight search
+se autoindent	  		        " 
+se smartindent                  " Language-specific indentation
+se backspace=indent,eol,start	" Use backspace over anything
+se nobackup			            " Disable backups
+se history=100			        " Command line history
+se undolevels=100               " Max undos
+se showcmd			            " display incomplete commands
+se expandtab			        " tabs -> spaces
+se tabstop=4			        " 4 spaces per tab
+se shiftwidth=4			        " Spaces for indentation
 
-set history=1000        " remember more commands
-set undolevels=1000     " more undo
-
-" Files to ignore on 
-set wildignore=*.swp,*.bak,*.pdf,*.png
-
-set title               " change the terminal's title
-
-" Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
-
-set nobackup           " No backups
-" set noswapfile         " No swap files
-
-" Sass should be highlighted as CSS (TODO: use vim-haml)
-au BufNewFile,BufRead *.scss set ft=css
-
-" Start nerdtree by typing CTRL-n
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+" Sass should be highlighted as CSS
+au BufNewFile,BufRead *.scss,*.sass set ft=css
 
 " Disable arrow navigation
 map <up> <nop>
@@ -58,21 +43,4 @@ nmap <silent> t7 t6tn
 nmap <silent> t8 t7tn
 nmap <silent> t9 :tablast <CR>
 
-filetype plugin on
-
-" Press F2 instead of :set paste
-set pastetoggle=<F2>
-
-" Required for lang-specific plugins like VimClojure
-syntax on
-filetype plugin indent on
-
-" Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" Multiple pastes: http://stackoverflow.com/a/7164121
-xnoremap p pgvy
 
